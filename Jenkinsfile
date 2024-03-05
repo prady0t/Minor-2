@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_IMAGE_NAME = 'prady0t/pipeline'
+        DOCKER_IMAGE_NAME = 'prady0t/minor-2'
     }
 
     stages {
