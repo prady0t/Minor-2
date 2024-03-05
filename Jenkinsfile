@@ -6,9 +6,9 @@ pipeline {
     }
 
     stages {
-        stage("echo") {
+        stage("start") {
             steps {
-                echo "This is a placeholde. We van run tests, builds etc etc like this"
+                echo "We start here."
             }
         }
 
@@ -17,6 +17,12 @@ pipeline {
                 script {
                     checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/prady0t/Minor-2']]])
                 }
+            }
+        }
+
+        stage("tests") {
+            steps {
+                echo "This is a placeholde. We van run tests, builds etc etc like this"
             }
         }
 
