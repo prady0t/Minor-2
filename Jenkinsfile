@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("echo") {
             steps {
-                echo "Hello"
+                echo "This is a placeholde. We van run tests, builds etc etc like this"
             }
         }
 
