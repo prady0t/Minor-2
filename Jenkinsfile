@@ -15,7 +15,7 @@ pipeline {
         stage("Checkout") {
             steps {
                 script {
-                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/prady0t/CI-CD-pipeline-app']]])
+                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/prady0t/Minor-2']]])
                 }
             }
         }
