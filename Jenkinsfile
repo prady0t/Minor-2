@@ -60,7 +60,8 @@ pipeline {
                     sed -i "s/toBeReplaced/${BUILD_NUMBER}/g" manifest/deployment.yaml
                     git add .
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
+                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:refs/heads/master
+
                 '''
             }
         }
