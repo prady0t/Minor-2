@@ -48,7 +48,7 @@ pipeline {
 
         stage('Update Deployment File'){
         environment {
-            GIT_REPO_NAME = "Minor-2"
+            GIT_REPO_NAME = "CI-CD-pipeline-manifests"
             GIT_USER_NAME = "prady0t"
         }
         steps {
