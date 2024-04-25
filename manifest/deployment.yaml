@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: login
-        image: prady0t/pipeline:15
+        image: prady0t/pipeline:toBeReplaced
         resources:
           limits:
             memory: "128Mi"
