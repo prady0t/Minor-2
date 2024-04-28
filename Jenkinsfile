@@ -60,7 +60,7 @@ pipeline {
                     sed -i "s|prady0t/pipeline:[0-9]*|prady0t/pipeline:${BUILD_NUMBER}|g" manifest/deployment.yaml
                     git add .
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:refs/heads/master
+                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:refs/heads/main
 
                 '''
             }
