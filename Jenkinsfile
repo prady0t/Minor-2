@@ -57,7 +57,7 @@ pipeline {
                     git config user.email "pradyot605@gmail.com"
                     git config user.name "prady0t"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/toBeReplaced/${BUILD_NUMBER}/g" manifest/deployment.yaml
+                    sed -i "s|prady0t/pipeline:[0-9]*|prady0t/pipeline:${BUILD_NUMBER}|g" manifest/deployment.yaml
                     git add .
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:refs/heads/master
