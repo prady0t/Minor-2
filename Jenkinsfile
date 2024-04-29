@@ -20,9 +20,19 @@ pipeline {
             }
         }
 
-        stage("tests") {
+        stage('Run Tests') {
             steps {
-                echo "This is a placeholde. We van run tests, builds etc etc like this"
+                // Install dependencies (if needed)
+                script {
+                    sh 'sudo apt install npm'
+                    sh 'npm install' // Install dependencies if not already installed
+                }
+                
+                // Run Jest tests
+                script {
+                    sh 'cd static'
+                    sh 'npx jest'
+                }
             }
         }
 
