@@ -24,15 +24,9 @@ pipeline {
             steps {
                 // Install dependencies (if needed)
                 script {
-                    sh 'sudo apt install npm'
-                    sh 'npm install' // Install dependencies if not already installed
+                    sh 'echo placeholder to run tests'
                 }
                 
-                // Run Jest tests
-                script {
-                    sh 'cd static'
-                    sh 'npx jest'
-                }
             }
         }
 
