@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: login
-        image: prady0t/minor-2:31
+        image: prady0t/minor-2:32
         resources:
           limits:
             memory: "128Mi"
